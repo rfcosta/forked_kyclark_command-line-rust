@@ -1,20 +1,23 @@
 // Example javascript
 import { Person } from './Person.js';
 
- var costas = [
-     new Person('Reginaldo Costa', 69),
-     new Person('Tiziana Costa', 63),
-     new Person('Leticia Costa', 36),
-     new Person('Bernardo Costa', 30)
- ];
-
-costas.map((p) => {
-    console.log(JSON.stringify(p, null, 4)); 
-});
-
-let horizontal_line = "=======================================================================================================";
-
 // =====  M A I N  =====
+
+let horizontal_line = "=".repeat(105);
+
+let regi = new Person('Reginaldo Costa', 69);
+let titi = new Person('Tiziana Costa', 63);
+let leti = new Person('Leticia Costa', 36);
+let be   = new Person('Bernardo Costa', 30);
+ 
+let costas = [regi, titi, leti, be];
+
+console.log(horizontal_line);
+costas.map((p) => {
+    //console.log(JSON.stringify(p, null, 4));
+    console.log(p.toString()); 
+});
+console.log(horizontal_line);
 
 let myList = ['A', 'B', 'C'];
 for (let i in myList) {
